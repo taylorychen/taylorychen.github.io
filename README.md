@@ -1,2 +1,2 @@
 # taylorychen.github.io
-Personal Portfolio Site
+Personal portfolio site
