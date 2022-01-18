@@ -46,6 +46,7 @@ header {
 
 .logo {
     font-size: 1.4rem;
+    padding-left: 8px;
 }
 
 a {
@@ -306,7 +307,8 @@ main {
 
     .header-container,
     .footer-container {
-        padding-left: 1.75%;
+        padding-left: 1%;
+        padding-right: 1%;
     }
 
     main {
@@ -325,7 +327,12 @@ main {
 
     .header-container,
     .footer-container {
-        padding-left: 2.67%;
+        padding-left: 1.33%;
+        padding-right: 1.33%;
+    }
+
+    .logo {
+        padding-left: 20px;
     }
 
     main {
@@ -519,7 +526,7 @@ main {
 
 
 /* Mobile */
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
     .header-container {
         padding-left: 2.5%;
