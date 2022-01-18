@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: rgb(10, 10, 10);
+    --mainColor: white;
+    --xColor: rgb(0, 247, 255);
+    --oColor: rgb(247, 0, 255);
+}
+
+body {
+    background-color: var(--backgroundColor);
+}
+
+main {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Audiowide', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--mainColor);
+}
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0px;
+    text-shadow: 0 0 20px var(--mainColor), 0 0 35px var(--mainColor),
+      0 0 50px var(--mainColor);
+}
+
+h3 {
+    text-shadow: 0 0 20px var(--mainColor), 0 0 30px var(--mainColor);
+}
+
+#winnerAnnounce {
+    display: none;
+}
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    position: relative;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    font-size: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.border {
+    position: absolute;
+    background-color: var(--mainColor);
+    box-shadow: 0 0 4px var(--mainColor), 0 0 8px var(--mainColor), 0 0 16px var(--mainColor);
+}
+
+.vertical {
+    width: 2px;
+    height: 300px;
+}
+
+.vertical.a { 
+    grid-column: 2;
+}
+.vertical.b { 
+    grid-column: 3;  
+}
+
+.horizontal {
+    width: 300px;
+    height: 2px;
+}
+
+.horizontal.a {
+    grid-row: 2;
+}
+
+.horizontal.b {
+    grid-row: 3;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resetButton {
+    margin-top: 1.2em;
+    background-color: var(--mainColor);
+    color: var(--backgroundColor);
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--mainColor), 0 0 20px var(--mainColor), 0 0 30px var(--mainColor);
+}
+
+.X {
+    text-shadow: 0 0 5px var(--mainColor), 0 0 10px var(--xColor), 0 0 20px var(--xColor),
+        0 0 30px var(--xColor), 0 0 40px var(--xColor);
+}
+
+.O {
+    text-shadow: 0 0 5px var(--mainColor), 0 0 10px var(--oColor), 0 0 20px var(--oColor),
+        0 0 30px var(--oColor), 0 0 40px var(--oColor);
+}

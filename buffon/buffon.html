@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buffon's Needle Problem</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ba0962fb4c.js" crossorigin="anonymous"></script>
+
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Buffon's Needle Simulation</h1>
+        </header>
+        <main>
+            <section id="intro">
+                Consider dropping a needle of length <span class="math">l</span> on a set of parallel lines a constant
+                interval <span class="math">d</span> apart. The probability that the needle lands such that it crosses
+                one of the lines is <br>
+                <img id="probabilities" src="images/prob.png" width="439" height="143"
+                    alt="\frac{2l}{\pi d} , l \leq d and \frac{2l}{\pi d}( \frac{d}{l} \arccos{(\frac{d}{l}})-\sqrt{1-(\frac{d}{l})^2}+1 ) , l > d">
+            </section>
+            <div class="flex">
+                <section id="grid">
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                    <div class="tile"></div>
+                </section>
+                <section id="controls">
+                    <button onclick="drop(1)">Drop 1</button>
+                    <button onclick="drop(10)">Drop 10</button>
+                    <button onclick="drop(100)">Drop 100</button>
+                    <button onclick="reset()" id="reset">Reset</button>
+                    <br>
+                    <input type="range" min="0.1" max="2" value="1" step="0.1" class="slider" id="length">
+                    <br>
+                    <label>Ratio of needle length to gap: &nbsp; <span id="ratioDisplay"></span></label>
+                    <table id="stats">
+                        <tr>
+                            <th>Drops</th>
+                            <td class="data drop">0</td>
+                        </tr>
+                        <tr>
+                            <th>Crosses</th>
+                            <td class="data cross">0</td>
+                        </tr>
+                        <tr>
+                            <th>Crosses / Drops</th>
+                            <td class="data exp">-</td>
+                        </tr>
+                        <tr>
+                            <th>Expected</th>
+                            <td class="data theor">0.6366197724</td>
+                        </tr>
+                        <tr>
+                            <th>% Difference</th>
+                            <td class="data diff">-</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <section id="explanation">
+                <button class="explanation-button">Click to Learn More</button>
+                <iframe src="buffons needle.pdf" frameborder="0" style="display: none"></iframe>
+            </section>
+        </main>
+    </div>
+    <div class="footer-container">
+        <footer>
+            <div>
+                <a href="mailto:tchen073@gmail.com" target="_blank" class="contact-button">
+                    <!-- <img src="images/envelope-regular.svg" height="25px" width="25px" alt="Email Me"> -->
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="https://github.com/taylorchen73" target="_blank" class="contact-button">
+                    <!-- <img src="images/github-brands.svg" height="25px" width="25px" alt="GitHub"> -->
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/taylor-chen-8b75a0227" target="_blank" class="contact-button">
+                    <!-- <img src="images/linkedin-brands.svg" height="25px" width="25px" alt="LinkedIn"> -->
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div>&copy; 2022</div>
+
+
+            <!-- icons from fontawesome at
+            https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=email
+            https://fontawesome.com/v5.15/icons/github?style=brands
+            https://fontawesome.com/v5.15/icons/linkedin?style=brands -->
+        </footer>
+    </div>
+</body>
+
+</html>
